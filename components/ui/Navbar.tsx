@@ -4,19 +4,13 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-// @lpg: Update navLinks labels and hrefs to match the company's page type.
-// For 1-Page: use anchor links (#services, #about, #contact)
-// For 5-Pages: use real routes (/about, /services, /contact, /faq)
-// IMPORTANT: Keep this static array — only change label/href values.
-// Do NOT replace with .map() on a string array or compute hrefs dynamically.
 const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'About',    href: '#about'    },
   { label: 'Contact',  href: '#contact'  },
 ]
 
-// @lpg: Replace with real company name and CTA
-const BRAND_NAME = 'Company Name'
+const BRAND_NAME = 'AI Digitalize'
 const CTA = { label: 'Get Started', href: '#contact' }
 
 export default function Navbar() {
@@ -41,7 +35,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-nav">
         <Link
           href="/"
-          className="font-heading font-bold text-xl text-content-primary hover:text-brand-500 transition-colors"
+          className="font-heading font-bold text-xl text-brand-500 hover:text-brand-400 transition-colors"
         >
           {BRAND_NAME}
         </Link>
