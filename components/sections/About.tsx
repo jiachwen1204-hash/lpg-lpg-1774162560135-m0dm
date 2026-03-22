@@ -98,8 +98,8 @@ export default function About() {
                   {/* Floating stat cards */}
                   <div className="absolute top-4 left-4 bg-surface border border-surface-border rounded-card p-3 shadow-card animate-float">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
-                        <Zap className="w-4 h-4 text-green-400" />
+                      <div className="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-brand-500" />
                       </div>
                       <div>
                         <div className="text-xs font-semibold text-content-primary">99.9%</div>
@@ -172,7 +172,7 @@ export default function About() {
               <div className="absolute inset-0 bg-brand-500/40 blur-xl rounded-pill scale-110 pointer-events-none" />
               <a
                 href={CONTENT.cta.href}
-                className="relative z-10 inline-flex items-center gap-2 px-8 py-4 font-body font-semibold bg-brand-500 text-content-inverse rounded-pill hover:bg-brand-700 transition-all duration-300"
+                className="relative z-10 inline-flex items-center gap-2 px-8 py-4 font-body font-semibold bg-brand-500 text-content-inverse rounded-pill hover:bg-brand-600 transition-all duration-300"
               >
                 {CONTENT.cta.label}
                 <TrendingUp className="w-4 h-4" />

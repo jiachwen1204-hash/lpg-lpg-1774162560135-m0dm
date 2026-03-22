@@ -66,10 +66,10 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-section relative bg-[#0a0a10] overflow-hidden">
+    <section className="py-section relative bg-surface overflow-hidden">
       {/* Ambient glow orbs */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-500/8 blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full bg-accent/6 blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand-500/6 blur-[150px] pointer-events-none" />
       
       {/* Dot grid texture */}
       <div className="absolute inset-0 pointer-events-none opacity-20"
@@ -102,15 +102,15 @@ export default function Stats() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <AnimateIn key={stat.label} delay={i * 100}>
-              <div className="group relative bg-surface-raised/80 backdrop-blur-sm rounded-card-lg p-8 border border-surface-border/40 hover:border-brand-500/40 transition-all duration-500 hover:shadow-glow-sm">
+              <div className="group relative bg-surface-raised backdrop-blur-sm rounded-card p-8 border border-surface-border/40 hover:border-brand-500/40 transition-all duration-500 hover:shadow-glow-sm">
                 {/* Top accent line */}
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Inner glow on hover */}
-                <div className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/[0.03] transition-colors duration-500 rounded-card-lg" />
+                <div className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/[0.03] transition-colors duration-500 rounded-card" />
                 
                 <div className="relative z-10 text-center min-h-[140px] flex flex-col items-center justify-center">
-                  <div className="font-heading font-black text-[2.75rem] lg:text-display-md text-brand-500 mb-3 tracking-tight">
+                  <div className="font-heading font-black text-[2.75rem] lg:text-display-md text-brand-500 mb-3 tracking-tight leading-none">
                     <CountUp target={stat.value} suffix={stat.suffix} />
                   </div>
                   <div className="font-heading font-semibold text-lg text-content-primary mb-2">
