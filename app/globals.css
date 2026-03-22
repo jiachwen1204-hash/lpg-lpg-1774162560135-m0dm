@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* ─── Brand scale (derived via color-mix from brand-500 / brand-700) ─── */
+:root {
+  --brand-50:  color-mix(in srgb, #0EA5E9  5%, white);
+  --brand-100: color-mix(in srgb, #0EA5E9 12%, white);
+  --brand-200: color-mix(in srgb, #0EA5E9 25%, white);
+  --brand-300: color-mix(in srgb, #0EA5E9 50%, white);
+  --brand-400: color-mix(in srgb, #0EA5E9 75%, white);
+  --brand-500: #0EA5E9;
+  --brand-600: color-mix(in srgb, #0EA5E9 82%, black);
+  --brand-700: #0369A1;
+  --brand-800: color-mix(in srgb, #0369A1 80%, black);
+  --brand-900: color-mix(in srgb, #0369A1 60%, black);
+  --brand-950: color-mix(in srgb, #0369A1 40%, black);
+
+  /* Archetype accent (locked per archetype — gold for corporate, electric for agency, etc.) */
+  --accent:     #818cf8;
+  --brand-glow: color-mix(in srgb, #0EA5E9 40%, transparent);
+
+  /* ─── Surfaces ─────────────────────────────────────────────────────── */
+  --surface-default:       #0f0f13;
+  --surface-raised:        #17171f;
+  --surface-overlay:       color-mix(in srgb, #17171f 96%, #0EA5E9);
+  --surface-border:        color-mix(in srgb, #0EA5E9 12%, transparent);
+  --surface-border-strong: color-mix(in srgb, #0EA5E9 28%, transparent);
+
+  /* ─── Content ──────────────────────────────────────────────────────── */
+  --content-primary:   #f1f1f5;
+  --content-secondary: color-mix(in srgb, #f1f1f5 65%, transparent);
+  --content-muted:     #8b8ba7;
+  --content-inverse:   #ffffff;
+
+  /* ─── Font families (overridden by layout.tsx next/font/google classes) */
+  --font-heading: sans-serif;
+  --font-body:    sans-serif;
+  --font-mono:    monospace;
+
+  /* ─── Legacy aliases (keep for compatibility) ─────────────────────── */
+  --bg:     #0f0f13;
+  --surface: #17171f;
+  --text:   #f1f1f5;
+  --muted:  #8b8ba7;
+  --border: #2a2a3a;
+
+  /* ─── Spacing / radius ─────────────────────────────────────────────── */
+  --spacing-section: 96px;
+  --spacing-gap:     24px;
+  --radius:          12px;
+}
+
+@layer base {
+  body {
+    background-color: var(--surface-default);
+    color: var(--content-primary);
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
