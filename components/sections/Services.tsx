@@ -76,7 +76,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-surface-border">
           {services.map((svc, i) => (
-            <AnimateIn key={svc.title} delay={i * 100} animation="fade-up">
+            <AnimateIn key={svc.title} delay={i * 100} direction="up">
               <div className="group relative h-full p-8 bg-surface hover:bg-surface-raised transition-colors duration-300">
                 <div className="w-10 h-10 rounded-sm bg-brand-500/8 flex items-center justify-center mb-6 group-hover:bg-brand-500/12 transition-colors">
                   <svc.icon className="w-5 h-5 text-brand-500" />

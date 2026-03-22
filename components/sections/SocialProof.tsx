@@ -1,5 +1,4 @@
 import AnimateIn from '@/components/ui/AnimateIn'
-import CountUp from '@/components/ui/CountUp'
 
 const clients = [
   { name: 'DataFlow Systems', logo: 'DF' },
@@ -86,7 +85,7 @@ export default function SocialProof() {
                 </span>
                 <div className="relative">
                   <div className="font-heading font-bold text-[clamp(2rem,4vw,3rem)] text-content-primary">
-                    <CountUp end={stat.value} suffix={stat.suffix} />
+                    {stat.value}{stat.suffix}
                   </div>
                   <div className="text-sm text-content-muted mt-2 font-light">{stat.label}</div>
                 </div>
